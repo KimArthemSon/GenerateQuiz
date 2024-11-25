@@ -11,7 +11,7 @@ let text;
 let score = 0;
 let count = 0;
 
-// File input listener
+// File input event listener
 document.getElementById("fileInput").addEventListener("change", function (event) {
     reset();
     const file = event.target.files[0];
@@ -32,7 +32,7 @@ document.getElementById("fileInput").addEventListener("change", function (event)
     }
 });
 
-// Reset function
+// Reset the quiz state
 function reset() {
     currQuestion = 0;
     questionsData = [];
@@ -43,18 +43,14 @@ function reset() {
     answer.value = "";
 }
 
-// File processing
+// Process the file content
 async function readFile() {
     try {
-        let theWrong = 0;
-
         questions = text.split("|");
-        questions.splice(0, questions.length - 1).map((e, index) => {
+        questions.splice(0, questions.length - 1).map((e) => {
             let data = e.split(";");
             data[0] = data[0].trim();
             data[1] = data[1].trim();
-
-            theWrong = index;
 
             let obj = {
                 answer: data[0],
@@ -65,42 +61,40 @@ async function readFile() {
 
         copy = [...questionsData];
         start();
+        console.log(questionsData);
     } catch (error) {
         alert("Something wrong with the file format!!\n");
     }
 }
 
-// Start quiz
+// Display the current question
 function start() {
     des.textContent = copy[currQuestion].description;
 }
 
-// Form submission handler
+// Handle form submission
 forms.addEventListener("submit", (e) => {
     e.preventDefault();
-    try {
-        if ((answer.value + "").toLowerCase() === (copy[currQuestion].answer + "").toLowerCase()) {
-            score++;
-        }
 
-        last.textContent = "Last Answer: " + copy[currQuestion].answer;
-        answer.value = "";
-        scoreboard.textContent = "Score: " + score;
-
-        RandomNextQuestion();
-    } catch (error) {
-        alert("No File Input!!");
+    if ((answer.value + "").toLowerCase() === (copy[currQuestion].answer + "").toLowerCase()) {
+        score++;
     }
+
+    last.textContent = "Last Answer: " + copy[currQuestion].answer;
+    answer.value = "";
+    scoreboard.textContent = "Score: " + score;
+
+    RandomNextQuestion();
 });
 
-// Select next random question
+// Select the next random question
 function RandomNextQuestion() {
+    count++;
     let newCopy = [];
 
     if (copy.length === 0 || count === questionsData.length) {
         newCopy = [...questionsData];
         copy = [...newCopy];
-        currQuestion = Math.floor(Math.random() * questionsData.length);
         count = 0;
     } else {
         newCopy = copy.filter((_, i) => i !== currQuestion);
