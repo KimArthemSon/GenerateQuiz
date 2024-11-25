@@ -4,19 +4,20 @@ Follow the following format:
 
 Answer: Books
 
-; <- The  ;  separates the question and answer
+; <- The   ;   separates the description and answer
 
 Description of the question: it is made in paper
 
 | <- separates the questions
 
-Answer: pen
+pen
 
 ; 
 
-Description of the question: use in writing that has ink
+use in writing that has ink
 
-| <- separates the questions
+|
+
 
 /// Actual Sample in txt file
 
@@ -40,5 +41,5 @@ use in writing that has ink
 
 ///////////////////
 
-Fllow the format
+Follow the format
 
