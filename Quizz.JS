@@ -56,6 +56,7 @@ async function readFile() {
      })
      copy = [...questionsData];
      start();
+     console.log(questionsData);
   } catch (err) {
     console.error('Error reading file:', err);
   }
@@ -70,26 +71,24 @@ forms.addEventListener("submit", (e)=>{
 
     console.log(e.value+"\n"+ (copy[currquestion].answer+"").toLowerCase())
     if((answer.value+"").toLowerCase() === (copy[currquestion].answer+"").toLowerCase()) score++;
-    else {
-        if(score!=0)
-        score--;
-    }
+    
    last.textContent = "Last Answer: "+copy[currquestion].answer;
    answer.value = "";
     scoreboard.textContent = "Score: "+score;
-    RandomNextQuestion();
-    start();
+    
+    start(RandomNextQuestion());
 })
 
 
 function RandomNextQuestion(){
     let newcopy = [];
-    if (copy.length === 0) {
+    if (copy.length === 1) {
         copy = [...questionsData]; 
     } else {
         newcopy = copy.filter((e, i) => i !== currquestion); 
     }
 
+   copy = [...newcopy];
     if (newcopy.length > 0) {
         currquestion = Math.floor(Math.random() * newcopy.length);
     }

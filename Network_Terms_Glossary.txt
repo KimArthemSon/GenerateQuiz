@@ -75,7 +75,7 @@ is a wide-area protocol that features high data rates and equal-sized packets (c
 |
 
 Frame Relay;
-;
+
  is a WAN protocol for LAN internetworking that provides a fast and efficient method of transmitting information across multiple switches and routers.
 
 |
