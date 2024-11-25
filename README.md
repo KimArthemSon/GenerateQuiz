@@ -1,5 +1,6 @@
 Quiz Generator 
-will Work Follow the following format:
+
+Follow the following format:
 
 Answer: Books
 
