@@ -25,7 +25,7 @@ document.getElementById("fileInput").addEventListener("change", function (event)
         };
 
         reader.onerror = function (e) {
-            console.error("Error reading file", e);
+           alert("Error File");
         };
 
         reader.readAsText(file);
@@ -75,7 +75,9 @@ function start() {
 // Handle form submission
 forms.addEventListener("submit", (e) => {
     e.preventDefault();
+    try{
 
+   
     if ((answer.value + "").toLowerCase() === (copy[currQuestion].answer + "").toLowerCase()) {
         score++;
     }
@@ -85,6 +87,9 @@ forms.addEventListener("submit", (e) => {
     scoreboard.textContent = "Score: " + score;
 
     RandomNextQuestion();
+   } catch(error){
+    alert("No file input!!");
+   }
 });
 
 // Select the next random question
