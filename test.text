@@ -9,7 +9,7 @@ Direct Delivery;
  – occurs when the IP node forwards a packet to its final destination in the network.
 |
 
- Indirect Delivery;
+ Indirect Delivery
 
  – occurs when the IP node (host) forwards a packet to an intermediate node (IP router)
 because the final destination is not on a directly attached network.
