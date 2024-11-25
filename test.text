@@ -1,0 +1,16 @@
+Packet Delivery;
+
+refers to the way a packet is handled by the underlying physical networks under the control of the
+network layer.
+
+|
+Direct Delivery;
+
+ – occurs when the IP node forwards a packet to its final destination in the network.
+|
+
+ Indirect Delivery;
+
+ – occurs when the IP node (host) forwards a packet to an intermediate node (IP router)
+because the final destination is not on a directly attached network.
+|

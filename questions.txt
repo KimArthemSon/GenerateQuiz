@@ -1,0 +1,191 @@
+Encapsulation
+ ;
+is a process
+wherein a new string of
+information is added to an
+existing unit to form a new unit of
+information. A new datagram is
+formed by adding headers and
+trailers to a data payload
+
+
+|
+
+
+Decapsulation ;
+ is the reverse
+process of encapsulation wherein
+the header and tail of a packet are
+removed to obtain the data
+payload.
+
+|
+
+
+Data payload; 
+can be considered as the information to be transmitted. In a hierarchical communication process, the
+data unit (packet) transmitted from the upper layer to the lower layer can be called the data payload of the lower layer.
+|
+
+Packet; 
+is a data unit that is exchanged and transmitted on a
+network. It is in the format of header+data payload+tail. During
+transmission, the format and content of packets may change.
+|
+Header; 
+is the information segment added before the data payload
+during packet assembly to facilitate information transmission.
+
+|
+
+Tail;
+ is the information segment added after the payload to
+facilitate information transmission.
+
+|
+
+
+Internet Protocol (IP);
+
+It performs the following operations
+ Defines a packet and an addressing scheme
+ Transfers data between the Internet layer and network access layers
+ Routes packets to remote hosts
+|
+Internet Control Message Protocol (ICMP);
+
+It refers to a TCP/IP protocol that handles errors and controls the
+process of sending data between computers. Specifically, routers and hosts use ICMP to send reports of problems
+about packets that return to the original source that sent the packet. ICMP also includes an echo request/reply
+that is used to test whether a destination is reachable and responding.
+|
+ Internet Group Management Protocol (IGMP);
+
+ It refers to a TCP/IP protocol that handles multicasting. Hosts use
+IGMP to keep local routers apprised of their membership in multicast groups. When all hosts leave a group, routers
+no longer forward packets that arrive for the group.
+|
+ Address Resolution Protocol (ARP);
+
+ It refers to a TCP/IP protocol that obtains the physical address of a node from
+a specific IP number. It is used to dynamically bind a high-level IP address to a low-level physical hardware address
+and is used across a single physical network. It is limited to networks that support hardware broadcast.
+|
+ Reverse Address Resolution Protocol (RARP);
+
+ It refers to a TCP/IP protocol that allows a host with no local
+permanent data storage media to find its Internet address given its physical address.
+|
+
+Ethernet
+
+ It refers to a family of LANs, covered by a group of IEEE 802.3 standards. Ethernet is a best-effort delivery
+system that uses a CSMA/CD access method.
+
+|
+ Point-to-Point Protocol (PPP);
+ 
+ This refers to the protocol used for data transfer across a serial line.
+ Fiber distributed data interface (FDDI);This is a set of ANSI protocols for sending digital data over fiber optic cable.
+|
+ Asynchronous Transfer Mode (ATM);
+ 
+ This refers to a wide area protocol that features high data rates and equal-
+sized packets/cells suitable for text, audio, and video data transfer.
+|
+ Frame Relay;
+ 
+ This is a WAN protocol for LAN internetworking that provides a fast and efficient method of
+transmitting information from one user device to another across multiple switches and routers.
+|
+ Proxy ARP;
+ 
+ This protocol is used when a network terminal needs to pass data from one segment to another without
+changing its current IP address information.
+|
+Routing;
+
+is the basic element of data communication networks, which is the process of selecting paths on a network along
+which packets are sent from a source to a destination.
+
+|
+ Path determination;
+
+ enables a router to compare the destination address to the available routes in its routing
+table and to select the best path.
+|
+
+Routes;
+
+are the path information used to guide
+packet forwarding.
+|
+
+
+ A routing device (Router);
+
+  is a network device that
+forwards packets to a destination subnet based on
+routes. It maintains an IP routing table that stores
+routing information.
+
+
+|
+ Packet routing;
+
+is the overall network-wide
+process of finding the most efficient path for
+forwarding the IP packet from source to
+destination through the use of network routing
+tables, protocols, and algorithms.
+
+|
+ Network devices; 
+ 
+ need to forward IP packets from
+different subnets to their destination IP subnets.
+
+|
+
+Destination;
+identifies a destination subnet.
+
+|
+ Mask;
+
+ identifies a subnet together with a
+destination IP address.
+
+|
+ Outbound interface;
+ indicates the interface through
+which a data packet is sent out of the local router.
+|
+ Next hop;
+
+indicates the next-hop address used by
+the router to forward the data packet to the destination
+|
+
+Packet Forwarding;
+
+It is simply a passing or moving of information between interfaces (which can be from a host/router to the final
+destination/intermediate connecting device) according to the “directions”.
+|
+
+ Packet Delivery;
+
+refers to the way a packet is handled by the underlying physical networks under the control of the
+network layer.
+
+|
+Direct Delivery;
+
+ – occurs when the IP node forwards a packet to its final destination in the network.
+|
+
+ Indirect Delivery;
+
+ – occurs when the IP node (host) forwards a packet to an intermediate node (IP router)
+because the final destination is not on a directly attached network.
+|
