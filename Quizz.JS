@@ -60,6 +60,7 @@ async function readFile() {
         });
 
         copy = [...questionsData];
+        currQuestion = Math.floor(Math.random() * questionsData.length);
         start();
         console.log(questionsData);
     } catch (error) {
