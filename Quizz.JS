@@ -106,7 +106,7 @@ function RandomNextQuestion() {
         newCopy = copy.filter((_, i) => i !== currQuestion);
         copy = [...newCopy];
     }
-
+    
     currQuestion = Math.floor(Math.random() * newCopy.length);
     start();
 }

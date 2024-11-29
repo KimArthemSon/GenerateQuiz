@@ -4,14 +4,15 @@
     box-sizing: border-box;
 }
 
+
 /* Body Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background: linear-gradient(to bottom right, rgb(18, 18, 18), rgb(30, 30, 30));
+    color: #fafafa;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 100vh;
     flex-direction: column;
     padding: 20px;
 }
@@ -19,7 +20,7 @@ body {
 h1 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #666;
 }
 
 #Last {
@@ -30,6 +31,7 @@ h1 {
 
 /* Input and Button Styles */
 #fileInput {
+    margin-top: 100px;
     margin-bottom: 20px;
     padding: 10px;
     font-size: 1rem;
@@ -40,7 +42,7 @@ h1 {
 }
 
 #card {
-    background-color: white;
+    background-color: #ddd;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -49,7 +51,14 @@ h1 {
     text-align: center;
     margin-top: 20px;
 }
+#card input{
+    box-shadow: -2px 2px 1px rgb(0, 0, 0);
 
+}
+
+#card input:focus{
+    border: none;
+}
 #Description {
     margin-bottom: 15px;
     font-size: 1.2rem;
